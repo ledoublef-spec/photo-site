@@ -7,7 +7,7 @@
   <style>
     html, body {
       margin: 0;
-      padding: 20px 0; /* ~20px top and bottom spacing */
+      padding: 20px 0;
       background-color: #fff;
       font-family: Arial, sans-serif;
     }
@@ -19,9 +19,12 @@
     }
 
     .image {
-      max-height: calc(100vh - 40px); /* Leaves ~20px space top and bottom */
+      max-height: calc(100vh - 40px);
       height: auto;
       width: auto;
+      -webkit-user-drag: none; /* Prevent dragging in WebKit browsers */
+      user-select: none;        /* Prevent selection */
+      pointer-events: none;     /* Optional: disables interaction */
     }
 
     .text {
@@ -32,7 +35,7 @@
     }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false;"> <!-- Disables right-click on entire page -->
 
   <div class="container">
     <img src="photo.jpg" alt="Florinel Fratica" class="image">
