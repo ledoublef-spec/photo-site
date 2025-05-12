@@ -8,27 +8,56 @@
       margin: 0;
       background-color: #fff;
       font-family: Arial, sans-serif;
+      overflow: hidden; /* Prevents any unwanted scrolling */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
     }
 
     .wrapper {
+      position: relative;
       display: flex;
-      align-items: flex-start;
-      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards; /* Fade-in for wrapper */
     }
 
     .photo {
       width: 50vw;
       height: auto;
-      display: block;
+      opacity: 0;
+      animation: fadeInImage 2s 0.5s forwards; /* Fade-in for image */
     }
 
     .name {
       font-size: 10px;
       color: #000;
-      margin-left: auto;
-      padding-top: 2px;
-      text-align: right;
-      white-space: nowrap;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      opacity: 0;
+      animation: fadeInName 2s 0.5s forwards; /* Fade-in for name */
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInImage {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInName {
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
