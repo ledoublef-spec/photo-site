@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FLORINEL FRATICA</title>
   <style>
     * {
@@ -15,69 +15,67 @@
       font-family: 'Helvetica Neue', sans-serif;
       background-color: #000;
       color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
       overflow: hidden;
     }
 
-    .wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      position: relative;
+    .photo-container {
+      width: 50%;
+      height: 100%;
     }
 
     .photo {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: grayscale(100%) contrast(120%) brightness(80%);
+    }
+
+    .name-container {
+      width: 50%;
+      padding: 40px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
     }
 
     .name {
-      position: absolute;
-      top: 20px;
-      left: 20px;
       font-size: 3rem;
       font-weight: bold;
       letter-spacing: 2px;
       text-transform: uppercase;
-      z-index: 10;
-    }
-
-    .name span {
-      display: block;
-    }
-
-    .name span:first-child {
-      font-size: 3.5rem;
-    }
-
-    .name span:last-child {
-      font-size: 2.5rem;
     }
 
     @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .photo-container,
+      .name-container {
+        width: 100%;
+        height: 50%;
+      }
+
       .name {
         font-size: 2rem;
       }
 
-      .name span:first-child {
-        font-size: 2.5rem;
-      }
-
-      .name span:last-child {
-        font-size: 1.8rem;
+      .name-container {
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="photo-container">
     <img src="photo.jpg" alt="Portrait of Florinel Fratica" class="photo">
-    <div class="name">
-      <span>FLORINEL</span>
-      <span>FRATICA</span>
-    </div>
+  </div>
+  <div class="name-container">
+    <div class="name">FLORINEL FRATICA</div>
   </div>
 </body>
 </html>
