@@ -8,12 +8,11 @@
       margin: 0;
       background-color: #fff;
       font-family: Arial, sans-serif;
-    }
-
-    .wrapper {
+      height: 100vh;
       display: flex;
-      align-items: flex-start;
-      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      position: relative;
     }
 
     .photo {
@@ -25,17 +24,15 @@
     .name {
       font-size: 10px;
       color: #000;
-      margin-left: auto;
-      padding-top: 2px;
-      text-align: right;
+      position: absolute;
+      top: 20px;
+      right: 20px;
       white-space: nowrap;
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <img src="photo.jpg" alt="Portrait by Florinel Fratica" class="photo">
-    <div class="name">FLORINEL FRATICA</div>
-  </div>
+  <img src="photo.jpg" alt="Portrait by Florinel Fratica" class="photo">
+  <div class="name">FLORINEL FRATICA</div>
 </body>
 </html>
