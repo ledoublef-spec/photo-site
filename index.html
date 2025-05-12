@@ -7,25 +7,25 @@
   <style>
     html, body {
       margin: 0;
-      padding: 0;
-      height: 100vh; /* Full viewport height */
+      padding: 20px 0; /* ~20px top and bottom spacing */
       background-color: #fff;
       font-family: Arial, sans-serif;
     }
 
     .container {
       display: flex;
-      height: 100vh; /* Full height layout */
-      align-items: flex-start; /* Align text to top */
+      align-items: flex-start;
+      padding-left: 40px;
     }
 
     .image {
-      height: 100vh;
+      max-height: calc(100vh - 40px); /* Leaves ~20px space top and bottom */
+      height: auto;
       width: auto;
     }
 
     .text {
-      padding: 20px;
+      padding-left: 20px;
       font-size: 12px;
       color: #000;
       text-transform: uppercase;
