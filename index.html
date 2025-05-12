@@ -18,11 +18,9 @@
     }
 
     .photo {
-      width: 100%;  /* Use full width inside wrapper */
-      max-width: 50vw;  /* Ensure max width is 50vw for larger screens */
+      width: 100%;  /* Temporarily set to 100% for testing */
       height: auto;
       display: block;
-      flex-shrink: 0;  /* Prevent shrinking behavior */
     }
 
     .name {
@@ -33,6 +31,13 @@
       text-align: right;
       white-space: nowrap;
     }
-
-    /* Optional: Maintain layout for smaller screens */
-    @media (max
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Temporarily comment this out for testing -->
+    <img src="photo.jpg" alt="Portrait of Florinel Fratica" class="photo">
+    <div class="name">FLORINEL FRATICA</div>
+  </div>
+</body>
+</html>
