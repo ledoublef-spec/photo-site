@@ -2,41 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FLORINEL FRATICA</title>
   <style>
     body {
       margin: 0;
       padding: 40px;
-      background-color: #fff;
+      background: #fff;
       font-family: Arial, sans-serif;
     }
 
-    .wrapper {
-      position: relative;
-      display: inline-block;
+    .container {
+      display: flex; /* Flexbox for alignment */
+      align-items: flex-start; /* Align items to the top */
+      width: 50vw; /* Image width is 50% of the viewport width */
     }
 
-    .photo {
-      display: block;
-      width: auto;
+    img {
+      width: 50%; /* Image takes up 50% of the container */
       height: auto;
-      max-width: 100%;
     }
 
-    .name {
-      position: absolute;
-      top: 10px;
-      right: 10px;
+    .text {
       font-size: 12px;
       color: #000;
-      background: rgba(255, 255, 255, 0.7); /* optional: for readability */
-      padding: 2px 6px;
+      margin-left: 20px; /* Space between the image and the text */
       text-transform: uppercase;
     }
   </style>
 </head>
 <body>
 
-  <div class="wrapper">
-    <img src="photo.jpg" alt="Florinel Fratica" class
+  <div class="container">
+    <img src="photo.jpg" alt="Florinel Fratica">
+    <div class="text">FLORINEL FRATICA</div>
+  </div>
+
+</body>
+</html>
