@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>FLORINEL FRATICA</title>
   <style>
     body {
@@ -18,9 +18,11 @@
     }
 
     .photo {
-      width: 50vw;  /* Keeps the same width as before */
+      width: 100%;  /* Use full width inside wrapper */
+      max-width: 50vw;  /* Ensure max width is 50vw for larger screens */
       height: auto;
       display: block;
+      flex-shrink: 0;  /* Prevent shrinking behavior */
     }
 
     .name {
@@ -32,21 +34,5 @@
       white-space: nowrap;
     }
 
-    /* Optional: Maintain the layout for smaller screens */
-    @media (max-width: 600px) {
-      .photo {
-        width: 60vw;  /* Adjust the image size on small screens */
-      }
-      .name {
-        font-size: 8px;  /* Adjust the font size for better readability */
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <img src="photo.jpg" alt="Portrait of Florinel Fratica" class="photo">
-    <div class="name">FLORINEL FRATICA</div>
-  </div>
-</body>
-</html>
+    /* Optional: Maintain layout for smaller screens */
+    @media (max
