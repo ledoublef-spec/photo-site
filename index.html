@@ -15,13 +15,23 @@
       font-family: Arial, sans-serif;
       height: 100vh;
       display: flex;
-      flex-direction: row;
       overflow: hidden;
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;  /* No black background */
+    }
+
+    .container {
+      display: flex;
+      width: 90%;  /* Adjust the container's width */
+      height: 80%;  /* Maintain some space above and below the photo */
     }
 
     .photo-container {
       width: 50%;
       height: 100%;
+      padding: 20px 0;  /* Adds padding to create space above and below the image */
     }
 
     .photo {
@@ -32,14 +42,14 @@
 
     .name-container {
       width: 50%;
-      padding: 20px;
       display: flex;
       justify-content: flex-end;
       align-items: flex-start;
+      padding: 20px;
     }
 
     .name {
-      font-size: 1.5rem;  /* Smaller font size */
+      font-size: 1.5rem;
       font-family: Arial, sans-serif;
       font-weight: normal;
       letter-spacing: 1px;
@@ -48,30 +58,38 @@
 
     @media (max-width: 768px) {
       body {
+        height: auto;  /* Allow the page to expand */
+        margin: 0;
+        justify-content: flex-start;
+      }
+
+      .container {
         flex-direction: column;
+        width: 100%;
       }
 
       .photo-container,
       .name-container {
         width: 100%;
-        height: 50%;
+        height: auto;
+        padding: 10px;
       }
 
       .name {
-        font-size: 1.2rem;  /* Adjusted font size for smaller screens */
-      }
-
-      .name-container {
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
+        font-size: 1.2rem;
+        text-align: center;  /* Center name for smaller screens */
       }
     }
   </style>
 </head>
 <body>
-  <div class="photo-container">
-    <img src="photo.jpg" alt="Portrait of Florinel Fratica" class="photo">
+  <div class="container">
+    <div class="photo-container">
+      <img src="photo.jpg" alt="Portrait of Florinel Fratica" class="photo">
+    </div>
+    <div class="name-container">
+      <div class="name">FLORINEL FRATICA</div>
+    </div>
   </div>
-  <div class="name-container">
-    <div
+</body>
+</html>
