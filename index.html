@@ -8,29 +8,33 @@
       margin: 0;
       background-color: #fff;
       font-family: Arial, sans-serif;
+      position: relative;
     }
 
-    header {
-      position: fixed;
-      top: 20px;
-      right: 20px;
+    .container {
+      display: flex;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .name {
+      margin-left: 20px;
       font-size: 12px;
       color: #000;
-      z-index: 1000;
+      white-space: nowrap;
     }
 
     img {
       width: 50vw;
       height: auto;
       display: block;
-      padding: 20px;
     }
   </style>
 </head>
 <body>
-  <header>
-    FLORINEL FRATICA
-  </header>
-  <img src="photo.jpg" alt="Portrait by Florinel Fratica">
+  <div class="container">
+    <img src="photo.jpg" alt="Portrait by Florinel Fratica">
+    <div class="name">FLORINEL FRATICA</div>
+  </div>
 </body>
 </html>
