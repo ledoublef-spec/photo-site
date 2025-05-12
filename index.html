@@ -8,31 +8,37 @@
       margin: 0;
       background-color: #fff;
       font-family: Arial, sans-serif;
-      height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
+      padding: 60px 0; /* white space above and below */
+    }
+
+    .wrapper {
       position: relative;
+      width: 50vw;
     }
 
     .photo {
-      width: 50vw;
+      width: 100%;
       height: auto;
       display: block;
     }
 
     .name {
+      position: absolute;
+      top: 0;
+      right: 0;
       font-size: 10px;
       color: #000;
-      position: absolute;
-      top: 20px;
-      right: 20px;
+      padding: 5px;
       white-space: nowrap;
     }
   </style>
 </head>
 <body>
-  <img src="photo.jpg" alt="Portrait by Florinel Fratica" class="photo">
-  <div class="name">FLORINEL FRATICA</div>
+  <div class="wrapper">
+    <img src="photo.jpg" alt="Portrait by Florinel Fratica" class="photo">
+    <div class="name">FLORINEL FRATICA</div>
+  </div>
 </body>
 </html>
