@@ -31,4 +31,69 @@
 
     .photo-container.right {
       flex-direction: row-reverse;
-      padding-right
+      padding-right: 40px;
+    }
+
+    .image {
+      max-height: calc(100vh - 40px);
+      height: auto;
+      width: auto;
+      -webkit-user-drag: none;
+      user-select: none;
+    }
+
+    .text {
+      padding-left: 20px;
+      font-size: 12px;
+      color: #000;
+      text-transform: uppercase;
+    }
+
+    .impressum {
+      font-size: 10px;
+      color: #555;
+      text-align: center;
+      margin-top: 100px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Title container (unchanged, as in your original code) -->
+  <div class="container">
+    <img src="photo1.jpg" alt="Florinel Fratica" class="image" oncontextmenu="return false;">
+    <div class="text">FLORINEL FRATICA</div>
+  </div>
+
+  <!-- New gallery with 4 more photos, alternating left/right -->
+  <div class="gallery">
+    <div class="photo-container right">
+      <img src="photo2.jpg" alt="Photo 2" class="image" oncontextmenu="return false;">
+    </div>
+    <div class="photo-container left">
+      <img src="photo3.jpg" alt="Photo 3" class="image" oncontextmenu="return false;">
+    </div>
+    <div class="photo-container right">
+      <img src="photo4.jpg" alt="Photo 4" class="image" oncontextmenu="return false;">
+    </div>
+    <div class="photo-container left">
+      <img src="photo5.jpg" alt="Photo 5" class="image" oncontextmenu="return false;">
+    </div>
+  </div>
+
+  <div class="impressum">
+    <p>IMPRESSUM<br>
+    Angaben gemäß § 5 TMG<br>
+    Dies ist eine nicht-kommerzielle Webseite zur Präsentation von Kunstfotografie.<br>
+    Die Seite verfolgt keinerlei gewerbliche Interessen.<br>
+    Verantwortlich für den Inhalt:<br>
+    FLORINEL FRATICA<br>
+    12053 Berlin, Deutschland<br>
+    +49 (0) 1796 04 89 67<br>
+    florinelfratica [a] gmail.com<br>
+    @florinelfratica</p>
+  </div>
+
+</body>
+</html>
